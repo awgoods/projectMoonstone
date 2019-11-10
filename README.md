@@ -1,3 +1,2 @@
 # projectMoonstone
-Project Moonstone is my first webpage, built from scratch. 
-I love :coffee:
+Project Moonstone is my first webpage, built from scratch. :coffee: 
