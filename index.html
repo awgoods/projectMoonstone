@@ -1,19 +1,35 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" type="text/css" href="css/index.css">
-</head>
-<body>
-	<h1>Project Moonstone</h1>
-	<p>There is no exact goal to project moonostone, aside from learning the
-		the following:</p>
-		<ul>
-			<li>HTML, CSS, javascript</li>
-			<li>Website hosting with gh-pages and AWS</li>
-			<li>Git and  Github</li>
-			<li>Using tone.js to create awesome sounds and integrate my glove project</li>
-			<li>Installing an e-commerce plugin and selling <i>something</i> because it seems cool</li>
-		</ul>
-	<script type="text/javascript" src="js/index.js"></script>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- meta tag -->
+    <meta charset="utf-8">
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>Project Moonstone</title>
+  </head>
+
+  <body>
+    <h1>Project Moonstone</h1>
+    <h2>Uncover hidden relationshps in health data</h2>
+    <p>General summary of tool: With access to a health population database, a user has the option
+      to select two data points and plot their relationship. I.e. Option 1: age, Option 2: Height. The program will acess
+      data from a server and plot the results.</p>
+    <h3>Project Workflow</h3>
+    <ol>
+      <li>Write SQL to access a health database. Database must contain a ton of quantifiable quantifiable health metrics.</li>
+        <ol>
+          <li>Where can I obtain such a database?</li>
+        </ol>
+      <li>Display dropdown list of potential traits that the user can select</li>
+      <li>Record users selection of two traits, upon them running the search</li>
+      <li>Write SQL to gather and store the list</li>
+			<li>Write Python to parse through the numbers</li>
+			<li>Display the relationship in a graph, State the R^2 Value</li>
+		</ol>
+  </body>
+
+    <!-- Optional JavaScript -->
+		<script type="text/javascript" src="js/index.js"></script>
+
 </html>
