@@ -1,1 +1,1 @@
-alert("More website is coming soon.");
+alert("This is a work in progress");
