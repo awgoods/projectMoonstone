@@ -12,21 +12,40 @@
   <body>
     <h1>Project Moonstone</h1>
     <h2>Uncover hidden relationshps in health data</h2>
-    <p>General summary of tool: With access to a health population database, a user has the option
-      to select two data points and plot their relationship. I.e. Option 1: age, Option 2: Height. The program will acess
-      data from a server and plot the results.</p>
+    <p>The 21st buzzwords of IoT and big-data are used so often and interchangably the average person tends to forget they're actual things that can help society.
+    While their applications span across any-and-all industries (both technical and humanitarian), one
+    area that excites me especially is Mobile Health, wearable technology, and remote patient monitoring (See the Health Data wiki page). All three of these areas have one thing in common: they create patient data.
+    In this demonstration, witness first-hand how large sets of health metrics can help researchers glean insights about health trends and relationships.</p>
+
+    <p>Here's the sitch: you're the reseacher. Pick two health metrics below and discover any potential relationships among them.
+    The program will access HealthData.gov's Database, gather the data, and display it for you in a nice little plot. See if you can uncover any hidden relationships!
+    (Hint: The higher the R<sup>2</sup> value, the more related the two variables are!)</p>
+
     <h3>Project Workflow</h3>
     <ol>
-      <li>Write SQL (the most popular RDBMS) to access a health database. Database must contain a ton of quantifiable quantifiable health metrics.</li>
-        <ol>
-          <li>Where can I obtain such a database?</li>
-        </ol>
+      <li>Write SQL (the most popular RDBMS) to access a health database.</li>
       <li>Display dropdown list of potential traits that the user can select</li>
       <li>Record users selection of two traits, upon them running the search</li>
+        <ol>
+          <li>You can mix-and-match databases, to provide more variety and freedom in your analysis</li>
+        </ol>
       <li>Write SQL to gather and store the list</li>
 			<li>Write Python to parse through the numbers</li>
 			<li>Display the relationship in a graph, State the R^2 Value</li>
 		</ol>
+
+
+    <h4>Step One: Accessing and querying a healthcare database</h4>
+      <ol>
+        <li>Database must contain a ton of quantifiable quantifiable health metrics.</li>
+        <li><a href="https://medium.com/@ODSC/15-open-datasets-for-healthcare-830b19980d9">Article with examples</a></li>
+        <li>MIMIC-III is part of PhysioNet.org - a website dedicated to physiological data science projects.</li>
+        <li><a href="https://archive.physionet.org/physiobank/database/mimic2cdb-ps/">MIMIC-II</a> is a public Data Set with 110 patient entries.</li>
+        <li>PhysioNet's open datasets may allow the user to access one or many comparisons across many databases. When running their analysis.</li>
+      </ol>
+
+
+
   </body>
 
     <!-- Optional JavaScript -->
