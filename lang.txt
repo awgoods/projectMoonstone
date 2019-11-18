@@ -3,3 +3,7 @@ Access data from server: SQL, PostgresSQL
 Display server data on website:
 Analyze data: Python (Django)
 Present Data on website: ???
+
+The user will have two dropdown menus.
+In the dropdown menus, there will exist a list of health traits.
+Each trait will have an associated
