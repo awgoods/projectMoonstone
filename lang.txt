@@ -4,6 +4,12 @@ Display server data on website:
 Analyze data: Python (Django)
 Present Data on website: ???
 
+
+
 The user will have two dropdown menus.
 In the dropdown menus, there will exist a list of health traits.
-Each trait will have an associated
+Each trait will have an associated numerical data.
+When the user selects the traits they wish to relate, they will hit 'run'.
+A x vs y scatter plot will appear with an R2 value. 
+Therefore, the user can 'discover' relationships in health data simply by selecting the traits as listed in a database.
+Then, a 'restart' button will reset the program.
