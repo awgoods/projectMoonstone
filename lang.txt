@@ -1,0 +1,5 @@
+Front-end: HTML/CSS (Use Flexbox and CSS grid)
+Access data from server: SQL, PostgresSQL
+Display server data on website:
+Analyze data: Python (Django)
+Present Data on website: ???
