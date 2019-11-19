@@ -1,55 +1,92 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- meta tag -->
+    <!-- Required meta tags -->
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 		<!-- Custom CSS -->
 		<link rel="stylesheet" type="text/css" href="css/index.css">
+
     <title>Project Moonstone</title>
   </head>
 
   <body>
-    <h1>Project Moonstone</h1>
-    <h2>Uncover hidden relationshps in health data</h2>
-    <p>The 21st buzzwords of IoT and big-data are used so often and interchangably the average person tends to forget they're actual things that can help society.
-    While their applications span across any-and-all industries (both technical and humanitarian), one
-    area that excites me especially is Mobile Health, wearable technology, and remote patient monitoring (See the Health Data wiki page). All three of these areas have one thing in common: they create patient data.
-    In this demonstration, witness first-hand how large sets of health metrics can help researchers glean insights about health trends and relationships.</p>
 
-    <p>Here's the sitch: you're the reseacher. Pick two health metrics below and discover any potential relationships among them.
-    The program will access HealthData.gov's Database, gather the data, and display it for you in a nice little plot. See if you can uncover any hidden relationships!
-    (Hint: The higher the R<sup>2</sup> value, the more related the two variables are!)</p>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Project Moonstone</h1>
+        <p>Scrape through clinical databases and uncover hidden relationshps in health data.</p>
+      </div>
+      <h2>Here's the thing</h2>
+      <p>The 21st buzzwords of IoT and big-data are used so often and interchangably the average person tends to forget they're actual things that can help society.
+      While their applications span across any-and-all industries (both technical and humanitarian), one
+      area that excites me especially is Mobile Health, wearable technology, and remote patient monitoring (See the Health Data wiki page). All three of these areas have one thing in common: they create patient data.
+      In this demonstration, witness first-hand how large sets of health metrics can help researchers glean insights about health trends and relationships.</p>
 
-    <h3>Project Workflow</h3>
-    <ol>
-      <li>Write SQL (the most popular RDBMS) to access a health database.</li>
-      <li>Display dropdown list of potential traits that the user can select</li>
-      <li>Record users selection of two traits, upon them running the search</li>
-        <ol>
-          <li>You can mix-and-match databases, to provide more variety and freedom in your analysis</li>
-        </ol>
-      <li>Write SQL to gather and store the list</li>
-			<li>Write Python (Django or Flask) to parse through the numbers</li>
-			<li>Display the relationship in a graph, State the R^2 Value</li>
-		</ol>
+      <p>You're the reseacher. Pick two health metrics below and discover any potential relationships among them.
+      The program will access HealthData.gov's Database, gather the data, and display it for you in a nice little plot. See if you can uncover any hidden relationships!
+      (Hint: The higher the R<sup>2</sup> value, the more related the two variables are!)</p>
+    </div>
 
+    <div class="container">
+      <h2>Select a health database and metric selection</h2>
+      <p>First, use the dropdown menu to select which database you would like to sift though. It's contents will load onto a server, then you get to choose which two health attributes to analyze.
+      For example, say you select the MIMIC-II database and want to analze patient's Cardiac Out and their height (Maybe there's an un-anticipated relationship?!). Simply Select the database, then those both traits! Hit "Run" and see what you discover!</p>
 
-    <h4>Step One: Accessing and querying a healthcare database</h4>
-      <ol>
-        <li>Database must contain a ton of quantifiable quantifiable health metrics.</li>
-        <li><a href="https://medium.com/@ODSC/15-open-datasets-for-healthcare-830b19980d9">Article with examples</a></li>
-        <li>MIMIC-III is part of PhysioNet.org - a website dedicated to physiological data science projects.</li>
-        <li><a href="https://archive.physionet.org/physiobank/database/mimic2cdb-ps/">MIMIC-II</a> is a public Data Set with 110 patient entries.</li>
-        <li>PhysioNet's open datasets may allow the user to access one or many comparisons across many databases. When running their analysis.</li>
-      </ol>
-    <h4>Design the UI of the site? So people will know how it works?</h4>
+      <div class="row">
+
+        <div class="col-6">
+          <h3>Pick your database!</h3>
+          <div class="dropdown">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Data Base</button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">The Mayo Clinic</a>
+              <a class="dropdown-item" href="#">John's Hopkins</a>
+              <a class="dropdown-item" href="#">The Cleveland Clinc</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-3">
+          <h4>Trait Number 1</h4>
+          <div class="dropdown">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Select Trait</button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Cardiac Output</a>
+              <a class="dropdown-item" href="#">Age</a>
+              <a class="dropdown-item" href="#">Blood Pressure</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-3">
+          <h4>Trait Number 2</h4>
+          <div class="dropdown">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Select Trait</button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Cardiac Output</a>
+              <a class="dropdown-item" href="#">Age</a>
+              <a class="dropdown-item" href="#">Blood Pressure</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
 
 
 
   </body>
 
     <!-- Optional JavaScript -->
-		<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </html>
